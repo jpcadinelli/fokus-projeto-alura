@@ -56,7 +56,7 @@ function alterarContexto(contexto) {
         contexto.classList.remove('active');
     });
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `/imagens/${contexto}.png`);
+    banner.setAttribute('src', `./imagens/${contexto}.png`);
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `
@@ -97,13 +97,13 @@ function iniciar() {
     audioPlay.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
     iniciarOuPausarBt.textContent = "Pausar";
-    imgPlayPause.setAttribute('src', '/imagens/pause.png');
+    imgPlayPause.setAttribute('src', './imagens/pause.png');
 };
 
 function zerar() {
     clearInterval(intervaloId);
     iniciarOuPausarBt.textContent = "Começar";
-    imgPlayPause.setAttribute('src', '/imagens/play_arrow.png');
+    imgPlayPause.setAttribute('src', './imagens/play_arrow.png');
     intervaloId = null;
 };
 
